@@ -63,29 +63,19 @@ module.exports = {
         localeJsonSourceName: `locale`, // Name of directory that contains your translations
         languages: [`en`, `fr`], // Define the languages you want to support
         defaultLanguage: `en`,   // Set the default language
-        siteUrl: `https://www.rankingpt.com`, // Replace with your site URL
+        siteUrl: `http://localhost:8000`, // Replace with your site URL
 
         // Configure the translation paths
         i18nextOptions: {
           ns: ["translation"],
           defaultNS: "translation",
           fallbackLng: "en",
-          interpolation: {
-            escapeValue: false, // React already does escaping
-          },
+          // interpolation: {
+          //   escapeValue: false, // React already does escaping
+          // },
         },
-
-        // Mapping paths for your pages to support translations
-        pages: [
-          {
-            matchPath: "/:lang?/blog/:uid", // Apply i18n to blog posts
-            getLanguageFromPath: true,
-          },
-          {
-            matchPath: "/preview", // Ignore these paths from i18n
-            languages: ["en"],
-          },
-        ],
+        useLocalStorage: false,
+        redirect: false, // Disable automatic redirects based on language
       },
     },
     {
@@ -107,20 +97,7 @@ module.exports = {
         },
       },
     },
-    {
-      resolve: 'gatsby-plugin-react-i18next',
-      options: {
-        languages: ['en', 'fr', 'de'], // Add your languages here
-        defaultLanguage: 'en',
-        redirect: false,
-        i18nextOptions: {
-          // i18next options
-          interpolation: {
-            escapeValue: false, // React already does escaping
-          },
-        },
-      },
-    },
+
   ],
 };
 

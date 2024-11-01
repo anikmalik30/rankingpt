@@ -9,8 +9,11 @@ import 'react-tabs/style/react-tabs.css'
 import "/node_modules/aos/dist/aos.css";
 import "swiper/css";
 import "swiper/css/bundle";
+// gatsby-browser.js
+import 'flag-icons/css/flag-icons.min.css';
 
 // Global Style
 import './src/assets/css/style.css'
 import './src/assets/css/responsive.css'
 import './src/assets/css/dark.css'
+

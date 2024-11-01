@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { graphql, Link, navigate } from "gatsby";
+import React from "react";
+import { graphql, Link } from "gatsby";
 import Layout from "../components/App/Layout";
 import Seo from "../components/App/SEO";
 import Navbar from "../components/App/Navbar";
@@ -12,13 +12,7 @@ const Blog = ({ data, pageContext }) => {
     const { currentPage, numPages } = pageContext;
     const isFirst = currentPage === 1;
     const isLast = currentPage === numPages;
-    const [selectedLanguage, setSelectedLanguage] = useState(i18n.language);
-
-    const handleLanguageChange = (event) => {
-        const newLanguage = event.target.value;
-        setSelectedLanguage(newLanguage);
-        i18n.changeLanguage(newLanguage);
-    };
+    const selectedLanguage = i18n.language; // Use global language preference
 
     // Filter posts based on the selected language
     const filteredPosts = posts.filter(post => post.language === selectedLanguage);
@@ -34,77 +28,70 @@ const Blog = ({ data, pageContext }) => {
             <div className="blog-area bg-f9f9f9 ptb-100">
                 <div className="container-fluid">
                     <div className="row justify-content-center">
-                        <div className="col-lg-12 col-md-12">
-                            <div className="language-filter">
-                                <label htmlFor="language-select">Select Language: </label>
-                                <select
-                                    id="language-select"
-                                    value={selectedLanguage}
-                                    onChange={handleLanguageChange}
-                                >
-                                    <option value="en">English</option>
-                                    <option value="pt">Portuguese</option>
-                                    <option value="es">Spanish</option>
-                                    <option value="de">German</option>
-                                    {/* Add more languages as needed */}
-                                </select>
-                            </div>
-                        </div>
-                        {filteredPosts.map((post) => (
-                            <div key={post.id} className="col-lg-3 col-md-6">
-                                <div className="single-blog-post">
-                                    <div className="image">
-                                        <Link to={`/blog/${post.slug.current}`} className="d-block">
-                                            <img
-                                                src={post.thumbnailImage?.asset?.url}
-                                                alt={post.title}
-                                            />
-                                        </Link>
-                                    </div>
-                                    <div className="content">
-                                        <h3>
-                                            <Link to={`/blog/${post.slug.current}`}>
-                                                {post.title}
+                        {filteredPosts.length > 0 ? (
+                            filteredPosts.map((post) => (
+                                <div key={post.id} className="col-lg-3 col-md-6">
+                                    <div className="single-blog-post">
+                                        <div className="image">
+                                            <Link to={`/blog/${post.slug.current}`} className="d-block">
+                                                <img
+                                                    src={post.thumbnailImage?.asset?.url}
+                                                    alt={post.title}
+                                                />
                                             </Link>
-                                        </h3>
-                                        <p>{post.excerpt}</p>
+                                        </div>
+                                        <div className="content">
+                                            <h3>
+                                                <Link to={`/blog/${post.slug.current}`}>
+                                                    {post.title}
+                                                </Link>
+                                            </h3>
+                                            <p>{post.excerpt}</p>
+                                        </div>
                                     </div>
                                 </div>
+                            ))
+                        ) : (
+                            <div className="col-lg-12 col-md-12">
+                                <h2>{i18n.t('No blog posts available for this language')}</h2>
+                                <p>{i18n.t('Please check back later or select a different language.')}</p>
                             </div>
-                        ))}
+                        )}
                     </div>
 
-                    <div className="col-lg-12 col-md-12">
-                        <div className="pagination-area text-center">
-                            {!isFirst && numPages > 1 ? (
-                                <Link to={prevPage} className="prev page-numbers">
-                                    <i className="bx bx-chevrons-left"></i>
-                                </Link>
-                            ) : (
-                                <span className="prev page-numbers disabled">
-                                    <i className="bx bx-chevrons-left"></i>
-                                </span>
-                            )}
-                            {Array.from({ length: numPages }, (_, i) => (
-                                <Link
-                                    key={`pagination-number${i + 1}`}
-                                    to={`/blog/${i === 0 ? "" : i + 1}`}
-                                    className={`page-numbers ${currentPage === i + 1 ? "current" : ""}`}
-                                >
-                                    {i + 1}
-                                </Link>
-                            ))}
-                            {!isLast && numPages > 1 ? (
-                                <Link to={nextPage} className="next page-numbers">
-                                    <i className="bx bx-chevrons-right"></i>
-                                </Link>
-                            ) : (
-                                <span className="next page-numbers disabled">
-                                    <i className="bx bx-chevrons-right"></i>
-                                </span>
-                            )}
+                    {filteredPosts.length > 0 && (
+                        <div className="col-lg-12 col-md-12">
+                            <div className="pagination-area text-center">
+                                {!isFirst && numPages > 1 ? (
+                                    <Link to={prevPage} className="prev page-numbers">
+                                        <i className="bx bx-chevrons-left"></i>
+                                    </Link>
+                                ) : (
+                                    <span className="prev page-numbers disabled">
+                                        <i className="bx bx-chevrons-left"></i>
+                                    </span>
+                                )}
+                                {Array.from({ length: numPages }, (_, i) => (
+                                    <Link
+                                        key={`pagination-number${i + 1}`}
+                                        to={`/blog/${i === 0 ? "" : i + 1}`}
+                                        className={`page-numbers ${currentPage === i + 1 ? "current" : ""}`}
+                                    >
+                                        {i + 1}
+                                    </Link>
+                                ))}
+                                {!isLast && numPages > 1 ? (
+                                    <Link to={nextPage} className="next page-numbers">
+                                        <i className="bx bx-chevrons-right"></i>
+                                    </Link>
+                                ) : (
+                                    <span className="next page-numbers disabled">
+                                        <i className="bx bx-chevrons-right"></i>
+                                    </span>
+                                )}
+                            </div>
                         </div>
-                    </div>
+                    )}
                 </div>
             </div>
 
