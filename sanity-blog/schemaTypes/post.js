@@ -81,6 +81,8 @@ export default defineType({
         list: [
           { title: 'English', value: 'en' },
           { title: 'Portuguese', value: 'pt' },
+          { title: 'Spanish', value: 'es' },
+          { title: 'German', value: 'de' },
           // Add more languages as needed
         ],
         layout: 'radio', // Use radio buttons for selection

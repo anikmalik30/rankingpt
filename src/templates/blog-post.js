@@ -7,6 +7,7 @@ import Footer from "../components/App/Footer";
 import BlogSidebar from "../components/Blog/BlogSidebar";
 import { urlFor } from "../utils/sanityUtils";
 import SanityBlockContent from "@sanity/block-content-to-react";
+import SvgIcon from "../components/SvgIcon";
 
 const BlogPost = ({ data }) => {
     const post = data.sanityPost; // all the data from the post
@@ -77,6 +78,7 @@ const BlogPost = ({ data }) => {
                                     </div>
 
                                     <h1>{title}</h1>
+                                    <SvgIcon name="013-linkedin" width={50} height={50} />
 
                                     <SanityBlockContent
                                         blocks={_rawBody}

@@ -44,6 +44,8 @@ const Blog = ({ data, pageContext }) => {
                                 >
                                     <option value="en">English</option>
                                     <option value="pt">Portuguese</option>
+                                    <option value="es">Spanish</option>
+                                    <option value="de">German</option>
                                     {/* Add more languages as needed */}
                                 </select>
                             </div>
