@@ -72,6 +72,20 @@ export default defineType({
       title: 'Body',
       type: 'blockContent',
     }),
+    // Add language selection field
+    defineField({
+      name: 'language',
+      title: 'Language',
+      type: 'string',
+      options: {
+        list: [
+          { title: 'English', value: 'en' },
+          { title: 'Portuguese', value: 'pt' },
+          // Add more languages as needed
+        ],
+        layout: 'radio', // Use radio buttons for selection
+      },
+    }),
   ],
 
   preview: {
@@ -79,10 +93,14 @@ export default defineType({
       title: 'title',
       author: 'author.name',
       media: 'mainImage',
+      language: 'language'
     },
     prepare(selection) {
-      const { author } = selection
-      return { ...selection, subtitle: author && `by ${author}` }
+      const { author, language } = selection
+      return {
+        ...selection,
+        subtitle: `${author ? `by ${author}` : ''} (${language})`,
+      }
     },
   },
 })

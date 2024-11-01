@@ -1,15 +1,28 @@
-import React from "react";
-import { graphql, Link } from "gatsby";
+import React, { useState } from "react";
+import { graphql, Link, navigate } from "gatsby";
 import Layout from "../components/App/Layout";
 import Seo from "../components/App/SEO";
 import Navbar from "../components/App/Navbar";
 import Footer from "../components/App/Footer";
+import { useTranslation } from "react-i18next";
 
 const Blog = ({ data, pageContext }) => {
+    const { i18n } = useTranslation(); // Use i18n to access current language
     const posts = data.allSanityPost.nodes;
     const { currentPage, numPages } = pageContext;
     const isFirst = currentPage === 1;
     const isLast = currentPage === numPages;
+    const [selectedLanguage, setSelectedLanguage] = useState(i18n.language);
+
+    const handleLanguageChange = (event) => {
+        const newLanguage = event.target.value;
+        setSelectedLanguage(newLanguage);
+        i18n.changeLanguage(newLanguage);
+    };
+
+    // Filter posts based on the selected language
+    const filteredPosts = posts.filter(post => post.language === selectedLanguage);
+
     const prevPage = currentPage - 1 === 1 ? "/blog" : `/blog/${currentPage - 1}`;
     const nextPage = `/blog/${currentPage + 1}`;
 
@@ -21,7 +34,21 @@ const Blog = ({ data, pageContext }) => {
             <div className="blog-area bg-f9f9f9 ptb-100">
                 <div className="container-fluid">
                     <div className="row justify-content-center">
-                        {posts.map((post) => (
+                        <div className="col-lg-12 col-md-12">
+                            <div className="language-filter">
+                                <label htmlFor="language-select">Select Language: </label>
+                                <select
+                                    id="language-select"
+                                    value={selectedLanguage}
+                                    onChange={handleLanguageChange}
+                                >
+                                    <option value="en">English</option>
+                                    <option value="pt">Portuguese</option>
+                                    {/* Add more languages as needed */}
+                                </select>
+                            </div>
+                        </div>
+                        {filteredPosts.map((post) => (
                             <div key={post.id} className="col-lg-3 col-md-6">
                                 <div className="single-blog-post">
                                     <div className="image">
@@ -85,24 +112,24 @@ const Blog = ({ data, pageContext }) => {
 };
 
 export const query = graphql`
-    query($skip: Int!, $limit: Int!) {
-        allSanityPost(skip: $skip, limit: $limit) {
-            nodes {
-                id
-                title
-                slug {
-                    current
-                }
-                excerpt
-                thumbnailImage {
-                    asset {
-                        url
-                    }
-                }
-            }
+  query($skip: Int!, $limit: Int!) {
+    allSanityPost(skip: $skip, limit: $limit) {
+      nodes {
+        id
+        title
+        slug {
+          current
         }
+        excerpt
+        thumbnailImage {
+          asset {
+            url
+          }
+        }
+        language
+      }
     }
+  }
 `;
-
 
 export default Blog;

@@ -143,6 +143,7 @@ export const query = graphql`
           }
         }
       }
+      language
     }
   }
 `;
