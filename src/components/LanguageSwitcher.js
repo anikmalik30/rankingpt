@@ -47,7 +47,8 @@ const LanguageSwitcher = () => {
                     boxShadow: 'none',
                     cursor: 'pointer',
                     padding: '2px',
-                    borderRadius: '50%',
+                    marginLeft: '20px',
+                    // borderRadius: '50%',
                     transition: 'border-color 0.2s ease',
                     '&:hover': {
                         borderColor: '#007bff',
