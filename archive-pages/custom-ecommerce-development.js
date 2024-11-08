@@ -5,12 +5,12 @@ import Navbar from "../src/components/App/Navbar"
 import Footer from "../src/components/App/Footer"
 
 import MainBanner from "../src/components/English/custom-ecommerce-development/Banner"
-import ServicesBanner from "../src/components/English/custom-ecommerce-development/ServicesBanner"
+// import ServicesBanner from "../src/components/English/custom-ecommerce-development/ServicesBanner"
 import WhyRankingPT from "../src/components/English/custom-ecommerce-development/WhyRankingPT"
 import Industries from "../src/components/English/custom-ecommerce-development/Industries"
-import Appointment from "../src/components/English/custom-ecommerce-development/Appointment"
+// import Appointment from "../src/components/English/custom-ecommerce-development/Appointment"
 import Goals from "../src/components/English/custom-ecommerce-development/Goals"
-import Funnel from "../src/components/English/custom-ecommerce-development/Funnel"
+// import Funnel from "../src/components/English/custom-ecommerce-development/Funnel"
 
 
 import IndustriesWeWork from "../src/components/English/custom-ecommerce-development/IndustriesWeWork"

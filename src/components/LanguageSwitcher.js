@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import Select from 'react-select';
-// import { useTranslation } from 'react-i18next';
 import 'flag-icons/css/flag-icons.css';
+import { useTranslation } from 'react-i18next';
 
 const LanguageSwitcher = () => {
     const { i18n } = useTranslation();
