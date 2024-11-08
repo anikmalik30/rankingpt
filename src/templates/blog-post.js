@@ -7,9 +7,11 @@ import Footer from "../components/App/Footer";
 import BlogSidebar from "../components/Blog/BlogSidebar";
 import { urlFor } from "../utils/sanityUtils";
 import SanityBlockContent from "@sanity/block-content-to-react";
+import { useTranslation } from "react-i18next";
 import SvgIcon from "../components/SvgIcon";
 
 const BlogPost = ({ data }) => {
+    const { i18n } = useTranslation(); // Use i18n to access current language
     const post = data.sanityPost; // all the data from the post
 
     const { title, metaTitle, _rawBody, categories, publishedAt, author, mainImage } = post;
@@ -41,7 +43,6 @@ const BlogPost = ({ data }) => {
             <Seo title={metaTitle || "Blog Post"} />
 
             <Navbar />
-
 
             <div className="blog-details-area bg-f9f9f9 ptb-100">
                 <div className="container">
@@ -78,7 +79,7 @@ const BlogPost = ({ data }) => {
                                     </div>
 
                                     <h1>{title}</h1>
-                                    <SvgIcon name="013-linkedin" width={50} height={50} />
+                                    <SvgIcon name="007-growth" width={50} height={50} />
 
                                     <SanityBlockContent
                                         blocks={_rawBody}
@@ -100,7 +101,6 @@ const BlogPost = ({ data }) => {
                                     </div>
                                 </div>
 
-
                             </div>
                         </div>
 
@@ -119,8 +119,8 @@ const BlogPost = ({ data }) => {
 };
 
 export const query = graphql`
-  query($slug: String!) {
-    sanityPost(slug: { current: { eq: $slug } }) {
+  query($slug: String!, $language: String!) {
+    sanityPost(slug: { current: { eq: $slug } }, language: { eq: $language }) {
       title
       _rawBody
       metaTitle

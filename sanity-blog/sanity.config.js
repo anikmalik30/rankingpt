@@ -7,7 +7,7 @@ export default defineConfig({
   name: 'default',
   title: 'Freelance-Fiverr',
 
-  projectId: 's9yprksh',
+  projectId: 'hvgr1w7n',
   dataset: 'production',
 
   plugins: [structureTool(), visionTool()],
