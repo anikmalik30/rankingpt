@@ -13,7 +13,7 @@ import Goals from "../components/English/custom-ecommerce-development/Goals"
 // import Funnel from "../src/components/English/custom-ecommerce-development/Funnel"
 
 
-import IndustriesWeWork from "../components/English/custom-ecommerce-development/IndustriesWeWork"
+// import IndustriesWeWork from "../components/English/custom-ecommerce-development/IndustriesWeWork"
 import StartProjectWithUs from "../components/English/custom-ecommerce-development/StartProjectWithUs"
 import PartnerCMS from "../components/Common/PartnerCMS"
 import Layout from "../components/App/Layout"
@@ -39,7 +39,7 @@ const HomeOne = () => {
 
       <Goals />
 
-      <IndustriesWeWork />
+      {/* <IndustriesWeWork /> */}
 
       <StartProjectWithUs />
 
