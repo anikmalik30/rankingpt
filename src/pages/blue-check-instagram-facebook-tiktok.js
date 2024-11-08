@@ -1,14 +1,14 @@
 import React from "react"
-
-import Navbar from "../components/App/Navbar"
-import Footer from "../components/App/Footer"
-import MainBanner from "../components/English/Verification/MainBanner"
-
-import TikTokVerification from "../components/English/Verification/TikTokVerification"
-import FacebookVerification from "../components/English/Verification/FacebookVerification"
-import InstagramVerification from "../components/English/Verification/InstagramVerification"
 import Layout from "../components/App/Layout"
+import Navbar from "../components/App/Navbar"
 import SEO from "../components/App/SEO"
+import Footer from "../components/App/Footer"
+// import MainBanner from "../components/English/Verification/MainBanner"
+// import TikTokVerification from "../components/English/Verification/TikTokVerification"
+// import FacebookVerification from "../components/English/Verification/FacebookVerification"
+// import InstagramVerification from "../components/English/Verification/InstagramVerification"
+
+
 
 const BlueCheck = () => {
   return (
@@ -16,14 +16,15 @@ const BlueCheck = () => {
       <SEO title="Ecommerce SEO " />
 
       <Navbar />
-
-      <MainBanner />
+      {/* page */}
+      <p>BlueCheck</p>
+      {/* <MainBanner />
 
       <InstagramVerification />
 
       <FacebookVerification />
 
-      <TikTokVerification />
+      <TikTokVerification /> */}
 
 
 
