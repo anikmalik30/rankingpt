@@ -1,4 +1,4 @@
-import { defineField, defineType } from 'sanity'
+import { defineField, defineType } from 'sanity';
 
 export default defineType({
   name: 'post',
@@ -9,6 +9,7 @@ export default defineType({
       name: 'title',
       title: 'Title',
       type: 'string',
+      validation: Rule => Rule.required().error('Title is required'),
     }),
     defineField({
       name: 'slug',
@@ -18,27 +19,32 @@ export default defineType({
         source: 'title',
         maxLength: 96,
       },
+      validation: Rule => Rule.required().error('Slug is required'),
     }),
-    {
+    defineField({
       name: 'metaTitle',
       title: 'Meta Title',
       type: 'string',
-    },
-    {
+      validation: Rule => Rule.required().error('Meta Title is required'),
+    }),
+    defineField({
       name: 'metaDescription',
       title: 'Meta Description',
       type: 'text',
-    },
+      validation: Rule => Rule.required().error('Meta Description is required'),
+    }),
     defineField({
       name: 'author',
       title: 'Author',
       type: 'reference',
       to: { type: 'author' },
+      validation: Rule => Rule.required().error('Author is required'),
     }),
     defineField({
       name: 'excerpt',
       title: 'Excerpt',
       type: 'text',
+      validation: Rule => Rule.required().error('Excerpt is required'),
     }),
     defineField({
       name: 'thumbnailImage',
@@ -47,6 +53,7 @@ export default defineType({
       options: {
         hotspot: true,
       },
+      validation: Rule => Rule.required().error('Thumbnail Image is required'),
     }),
     defineField({
       name: 'mainImage',
@@ -55,24 +62,27 @@ export default defineType({
       options: {
         hotspot: true,
       },
+      validation: Rule => Rule.required().error('Main Image is required'),
     }),
     defineField({
       name: 'categories',
       title: 'Categories',
       type: 'array',
       of: [{ type: 'reference', to: { type: 'category' } }],
+      validation: Rule => Rule.required().min(1).error('At least one category is required'),
     }),
     defineField({
       name: 'publishedAt',
       title: 'Published at',
       type: 'datetime',
+      validation: Rule => Rule.required().error('Published date is required'),
     }),
     defineField({
       name: 'body',
       title: 'Body',
       type: 'blockContent',
+      validation: Rule => Rule.required().error('Body content is required'),
     }),
-    // Add language selection field
     defineField({
       name: 'language',
       title: 'Language',
@@ -87,6 +97,7 @@ export default defineType({
         ],
         layout: 'radio', // Use radio buttons for selection
       },
+      validation: Rule => Rule.required().error('Language is required'),
     }),
   ],
 
@@ -98,11 +109,11 @@ export default defineType({
       language: 'language'
     },
     prepare(selection) {
-      const { author, language } = selection
+      const { author, language } = selection;
       return {
         ...selection,
         subtitle: `${author ? `by ${author}` : ''} (${language})`,
-      }
+      };
     },
   },
-})
+});
