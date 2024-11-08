@@ -5,7 +5,7 @@ import Navbar from "../components/App/Navbar"
 // import PageBanner from "../components/Common/PageBanner"
 import Footer from "../components/App/Footer"
 // import ContactForm from "../components/Contact/ContactForm"
-// import SvgIcon from "../components/SvgIcon";
+import SvgIcon from "../components/SvgIcon";
 
 // import PageSpeedIcon from "../assets/icons/pagespeed.svg";
 const Contact = () => {
