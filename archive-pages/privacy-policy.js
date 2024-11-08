@@ -1,9 +1,9 @@
 import React from "react"
-import Layout from "../components/App/Layout"
-import SEO from "../components/App/SEO"
-import Navbar from "../components/App/Navbar"
-import PageBanner from "../components/Common/PageBanner"
-import Footer from "../components/App/Footer"
+import Layout from "../src/components/App/Layout"
+import SEO from "../src/components/App/SEO"
+import Navbar from "../src/components/App/Navbar"
+import PageBanner from "../src/components/Common/PageBanner"
+import Footer from "../src/components/App/Footer"
 import { Link } from "gatsby"
 
 import PrivacyPolicyImg from "../assets/images/blog/blog-img2.jpg"
@@ -13,7 +13,7 @@ const PrivacyPolicy = () => {
     <Layout>
       <SEO title="Privacy Policy" />
 
-      <Navbar/>
+      <Navbar />
 
       <PageBanner pageTitle="Privacy Policy" />
 
@@ -113,7 +113,7 @@ const PrivacyPolicy = () => {
                 <h3>6. Our Policy Concerning Children</h3>
 
               </div>
-              
+
             </div>
 
             <div className="col-lg-4 col-md-12">

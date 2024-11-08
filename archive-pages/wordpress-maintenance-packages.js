@@ -1,15 +1,15 @@
 import React from 'react';
-import Layout from "../components/App/Layout";
-import Seo from "../components/App/SEO";
-import MainBanner from '../components/English/wordpress-maintenance-packages/MainBanner';
-import Pricing from '../components/English/wordpress-maintenance-packages/Pricing';
-import Footer from '../components/App/Footer';
-import Navbar from "../components/App/Navbar"
+import Layout from "../src/components/App/Layout";
+import Seo from "../src/components/App/SEO";
+import MainBanner from '../src/components/English/wordpress-maintenance-packages/MainBanner';
+import Pricing from '../src/components/English/wordpress-maintenance-packages/Pricing';
+import Footer from '../src/components/App/Footer';
+import Navbar from "../src/components/App/Navbar"
 
-import DiscussProject from '../components/Common/DiscussProject';
-import FAQWordpressMaintenance from '../components/English/wordpress-maintenance-packages/FAQWordpressMaintenance';
-import WhyRankingPT from '../components/English/wordpress-maintenance-packages/WhyRankingPT';
-import Services from '../components/English/wordpress-maintenance-packages/Services';
+import DiscussProject from '../src/components/Common/DiscussProject';
+import FAQWordpressMaintenance from '../src/components/English/wordpress-maintenance-packages/FAQWordpressMaintenance';
+import WhyRankingPT from '../src/components/English/wordpress-maintenance-packages/WhyRankingPT';
+import Services from '../src/components/English/wordpress-maintenance-packages/Services';
 
 const WordpressMaintenance = () => {
     return (

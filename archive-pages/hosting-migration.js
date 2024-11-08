@@ -1,18 +1,18 @@
 import React from "react"
 
-import Navbar from "../components/App/Navbar"
-import Footer from "../components/App/Footer"
-import MainBanner from "../components/English/hosting-migration/MainBanner"
+import Navbar from "../src/components/App/Navbar"
+import Footer from "../src/components/App/Footer"
+import MainBanner from "../src/components/English/hosting-migration/MainBanner"
 
-import HostingPartners from "../components/Common/HostingPartners"
-import HostingScopeOfWork from "../components/English/hosting-migration/HostingScopeOfWork"
-import HostingAffectsSEO from "../components/English/hosting-migration/HostingAffectsSEO"
-import WhatIsHostingMigration from "../components/English/hosting-migration/WhatIsHostingMigration"
-import Layout from "../components/App/Layout"
-import SEO from "../components/App/SEO"
+import HostingPartners from "../src/components/Common/HostingPartners"
+import HostingScopeOfWork from "../src/components/English/hosting-migration/HostingScopeOfWork"
+import HostingAffectsSEO from "../src/components/English/hosting-migration/HostingAffectsSEO"
+import WhatIsHostingMigration from "../src/components/English/hosting-migration/WhatIsHostingMigration"
+import Layout from "../src/components/App/Layout"
+import SEO from "../src/components/App/SEO"
 
 
-import WhatWeDo from "../components/Common/WhatWeDo"
+import WhatWeDo from "../src/components/Common/WhatWeDo"
 
 const HomeOne = () => {
   return (

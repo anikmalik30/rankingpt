@@ -1,20 +1,20 @@
 import React from "react"
 
-import Navbar from "../components/App/Navbar"
-import Footer from "../components/App/Footer"
-import MainBanner from "../components/English/SEO-International/MainBanner"
+import Navbar from "../src/components/App/Navbar"
+import Footer from "../src/components/App/Footer"
+import MainBanner from "../src/components/English/SEO-International/MainBanner"
 
-import FAQSEOInternational from "../components/English/SEO-International/FAQSEOInternational"
-import SEOInternational from "../components/English/SEO-International/SEO-International"
-import HostingAffectsSEO from "../components/English/SEO-International/HostingAffectsSEO"
-import SEOInternational2 from "../components/English/SEO-International/SEO-International2"
-import SEOInternational3 from "../components/English/SEO-International/SEO-International3"
-import Goals from "../components/English/SEO-International/Goals"
-import Layout from "../components/App/Layout"
-import SEO from "../components/App/SEO"
+import FAQSEOInternational from "../src/components/English/SEO-International/FAQSEOInternational"
+import SEOInternational from "../src/components/English/SEO-International/SEO-International"
+import HostingAffectsSEO from "../src/components/English/SEO-International/HostingAffectsSEO"
+import SEOInternational2 from "../src/components/English/SEO-International/SEO-International2"
+import SEOInternational3 from "../src/components/English/SEO-International/SEO-International3"
+import Goals from "../src/components/English/SEO-International/Goals"
+import Layout from "../src/components/App/Layout"
+import SEO from "../src/components/App/SEO"
 
 
-import WhatWeDo from "../components/Common/WhatWeDo"
+import WhatWeDo from "../src/components/Common/WhatWeDo"
 
 const EcommerceSEO = () => {
   return (
@@ -27,7 +27,7 @@ const EcommerceSEO = () => {
 
       <HostingAffectsSEO />
 
-      <Goals/>
+      <Goals />
 
       <SEOInternational3 />
 
@@ -35,7 +35,7 @@ const EcommerceSEO = () => {
 
       <SEOInternational />
 
-      <FAQSEOInternational/>
+      <FAQSEOInternational />
 
 
       <Footer />

@@ -1,19 +1,19 @@
 import React from 'react';
-import Layout from "../components/App/Layout";
-import SEO from "../components/App/SEO";
-import MainBanner from '../components/English/web-development/MainBanner';
-import Features from '../components/English/web-development/Features';
-import AboutUsContent from '../components/English/web-development/AboutUsContent';
-import Services from '../components/English/web-development/Services';
-import WhatWeDo from '../components/English/web-development/WhatWeDo';
-import CaseStudies from '../components/English/web-development/CaseStudies';
-import Partners from '../components/English/web-development/Partners';
-import GetStarted from '../components/English/web-development/GetStarted';
-import Testimonials from '../components/English/web-development/Testimonials';
-import Footer from '../components/App/Footer';
-import Navbar from "../components/App/Navbar"
+import Layout from "../src/components/App/Layout";
+import SEO from "../src/components/App/SEO";
+import MainBanner from '../src/components/English/web-development/MainBanner';
+import Features from '../src/components/English/web-development/Features';
+import AboutUsContent from '../src/components/English/web-development/AboutUsContent';
+import Services from '../src/components/English/web-development/Services';
+import WhatWeDo from '../src/components/English/web-development/WhatWeDo';
+import CaseStudies from '../src/components/English/web-development/CaseStudies';
+import Partners from '../src/components/English/web-development/Partners';
+import GetStarted from '../src/components/English/web-development/GetStarted';
+import Testimonials from '../src/components/English/web-development/Testimonials';
+import Footer from '../src/components/App/Footer';
+import Navbar from "../src/components/App/Navbar"
 
-import HowWeb from '../components/English/web-development/HowWeb';
+import HowWeb from '../src/components/English/web-development/HowWeb';
 
 const WebDevelopment = () => {
     return (
@@ -41,7 +41,7 @@ const WebDevelopment = () => {
             <GetStarted />
 
             <Testimonials />
- 
+
             <Footer />
         </Layout>
     )

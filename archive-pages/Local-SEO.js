@@ -1,20 +1,20 @@
 import React from "react"
 
-import Navbar from "../components/App/Navbar"
-import Footer from "../components/App/Footer"
-import MainBanner from "../components/English/SEO-Local/MainBanner"
+import Navbar from "../src/components/App/Navbar"
+import Footer from "../src/components/App/Footer"
+import MainBanner from "../src/components/English/SEO-Local/MainBanner"
 
-import FAQSEOLocal from "../components/English/SEO-Local/FAQSEOLocal"
-import SEOLocal from "../components/English/SEO-Local/SEO-Local"
-import HostingAffectsSEO from "../components/English/SEO-Local/HostingAffectsSEO"
-import SEOLocal2 from "../components/English/SEO-Local/SEO-Local2"
-import SEOLocal3 from "../components/English/SEO-Local/SEO-Local3"
-import Goals from "../components/English/SEO-Local/Goals"
-import Layout from "../components/App/Layout"
-import SEO from "../components/App/SEO"
+import FAQSEOLocal from "../src/components/English/SEO-Local/FAQSEOLocal"
+import SEOLocal from "../src/components/English/SEO-Local/SEO-Local"
+import HostingAffectsSEO from "../src/components/English/SEO-Local/HostingAffectsSEO"
+import SEOLocal2 from "../src/components/English/SEO-Local/SEO-Local2"
+import SEOLocal3 from "../src/components/English/SEO-Local/SEO-Local3"
+import Goals from "../src/components/English/SEO-Local/Goals"
+import Layout from "../src/components/App/Layout"
+import SEO from "../src/components/App/SEO"
 
 
-import WhatWeDo from "../components/Common/WhatWeDo"
+import WhatWeDo from "../src/components/Common/WhatWeDo"
 
 const LocalSEO = () => {
   return (
@@ -25,7 +25,7 @@ const LocalSEO = () => {
 
       <MainBanner />
 
-      <Goals/>
+      <Goals />
 
       <HostingAffectsSEO />
 
@@ -35,7 +35,7 @@ const LocalSEO = () => {
 
       <SEOLocal />
 
-      <FAQSEOLocal/>
+      <FAQSEOLocal />
 
 
       <Footer />

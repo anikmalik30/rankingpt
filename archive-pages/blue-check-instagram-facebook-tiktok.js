@@ -1,14 +1,14 @@
 import React from "react"
 
-import Navbar from "../components/App/Navbar"
-import Footer from "../components/App/Footer"
-import MainBanner from "../components/English/Verification/MainBanner"
+import Navbar from "../src/components/App/Navbar"
+import Footer from "../src/components/App/Footer"
+import MainBanner from "../src/components/English/Verification/MainBanner"
 
-import TikTokVerification from "../components/English/Verification/TikTokVerification"
-import FacebookVerification from "../components/English/Verification/FacebookVerification"
-import InstagramVerification from "../components/English/Verification/InstagramVerification"
-import Layout from "../components/App/Layout"
-import SEO from "../components/App/SEO"
+import TikTokVerification from "../src/components/English/Verification/TikTokVerification"
+import FacebookVerification from "../src/components/English/Verification/FacebookVerification"
+import InstagramVerification from "../src/components/English/Verification/InstagramVerification"
+import Layout from "../src/components/App/Layout"
+import SEO from "../src/components/App/SEO"
 
 const BlueCheck = () => {
   return (

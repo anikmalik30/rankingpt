@@ -1,20 +1,20 @@
 import React from "react"
 
-import Navbar from "../components/App/Navbar"
-import Footer from "../components/App/Footer"
-import MainBanner from "../components/English/TiktokAds/MainBanner"
+import Navbar from "../src/components/App/Navbar"
+import Footer from "../src/components/App/Footer"
+import MainBanner from "../src/components/English/TiktokAds/MainBanner"
 
-import FAQTiktok from "../components/English/TiktokAds/FAQTiktok"
-import TikTokTargetAudience from "../components/English/TiktokAds/TikTokTargetAudience"
-import TikTokAds1 from "../components/English/TiktokAds/TikTokAds1"
-import TikTokAds3 from "../components/English/TiktokAds/TikTokAds3"
-import TikTokAds4 from "../components/English/TiktokAds/TikTokAds4"
-import Goals from "../components/English/TiktokAds/Goals"
-import Layout from "../components/App/Layout"
-import SEO from "../components/App/SEO"
+import FAQTiktok from "../src/components/English/TiktokAds/FAQTiktok"
+import TikTokTargetAudience from "../src/components/English/TiktokAds/TikTokTargetAudience"
+import TikTokAds1 from "../src/components/English/TiktokAds/TikTokAds1"
+import TikTokAds3 from "../src/components/English/TiktokAds/TikTokAds3"
+import TikTokAds4 from "../src/components/English/TiktokAds/TikTokAds4"
+import Goals from "../src/components/English/TiktokAds/Goals"
+import Layout from "../src/components/App/Layout"
+import SEO from "../src/components/App/SEO"
 
 
-import WhatWeDo from "../components/Common/WhatWeDo"
+import WhatWeDo from "../src/components/Common/WhatWeDo"
 
 const EcommerceSEO = () => {
   return (
@@ -25,7 +25,7 @@ const EcommerceSEO = () => {
 
       <MainBanner />
 
-      <Goals/>
+      <Goals />
 
       <TikTokAds3 />
 
@@ -35,7 +35,7 @@ const EcommerceSEO = () => {
 
       <TikTokTargetAudience />
 
-      <FAQTiktok/>
+      <FAQTiktok />
 
 
       <Footer />
