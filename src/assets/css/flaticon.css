@@ -1,7 +1,7 @@
 /*
 Flaticon icon font: Flaticon
 */
-@font-face {
+/* @font-face {
   font-family: "Flaticon";
   src: url("../fonts/flaticon.eot");
   src: url("../fonts/flaticon.eot?#iefix") format("embedded-opentype"),
@@ -130,4 +130,4 @@ Flaticon icon font: Flaticon
 }
 .flaticon-reputation:before {
   content: "\f122";
-}
+} */
