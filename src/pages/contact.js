@@ -1,4 +1,4 @@
-// import React, { useEffect } from "react";
+import React, { useEffect } from "react";
 // import Layout from "../components/App/Layout"
 // import SEO from "../components/App/SEO"
 // import Navbar from "../components/App/Navbar"
