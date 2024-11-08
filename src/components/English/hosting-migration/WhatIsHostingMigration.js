@@ -7,7 +7,7 @@ import {
   AccordionItemButton,
 } from "react-accessible-accordion"
 
-const WhatisHostingMigration = () => {
+const WhatIsHostingMigration = () => {
   return (
     <>
       <div className="what-we-do-area ptb-100">
@@ -52,7 +52,7 @@ const WhatisHostingMigration = () => {
                     </AccordionItemHeading>
                     <AccordionItemPanel>
                       <p>
-                      URL restructuring enhances search engine visibility and
+                        URL restructuring enhances search engine visibility and
                         improves user experience. The goal is to align URLs with
                         your new site structure.
                       </p>
@@ -113,4 +113,4 @@ const WhatisHostingMigration = () => {
   )
 }
 
-export default WhatisHostingMigration
+export default WhatIsHostingMigration

@@ -11,7 +11,7 @@ import TeamImg6 from "../../../assets/images/industries/education_learning.jpg"
 import TeamImg7 from "../../../assets/images/industries/food_drinks.jpg"
 import TeamImg8 from "../../../assets/images/industries/health_fitness.jpg"
 import TeamImg9 from "../../../assets/images/industries/marketplace_solutions.jpg"
-import TeamImg10 from "../../../assets/images/industries/Media_Enterainment.jpg"
+import TeamImg10 from "../../../assets/images/industries/media_enterainment.jpg"
 import TeamImg11 from "../../../assets/images/industries/ondemandservices.jpg"
 import TeamImg12 from "../../../assets/images/industries/taxi_solutions.jpg"
 import TeamImg13 from "../../../assets/images/industries/Transport_Logistic.jpg"
@@ -26,7 +26,7 @@ const IndustriesWeWork = () => {
           <div className="section-title">
             <h2>Industries We Work With</h2>
             <p>
-            We provide innovative solutions for following industries.
+              We provide innovative solutions for following industries.
             </p>
           </div>
 

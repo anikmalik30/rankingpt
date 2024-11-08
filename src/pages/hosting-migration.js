@@ -7,7 +7,7 @@ import MainBanner from "../components/English/hosting-migration/MainBanner"
 import HostingPartners from "../components/Common/HostingPartners"
 import HostingScopeOfWork from "../components/English/hosting-migration/HostingScopeOfWork"
 import HostingAffectsSEO from "../components/English/hosting-migration/HostingAffectsSEO"
-import WhatisHostingMigration from "../components/English/hosting-migration/WhatisHostingMigration"
+import WhatIsHostingMigration from "../components/English/hosting-migration/WhatIsHostingMigration"
 import Layout from "../components/App/Layout"
 import SEO from "../components/App/SEO"
 
@@ -25,7 +25,7 @@ const HomeOne = () => {
 
       <HostingPartners />
 
-      <WhatisHostingMigration/>
+      <WhatIsHostingMigration />
 
       <HostingAffectsSEO />
 
