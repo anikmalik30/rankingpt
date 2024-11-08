@@ -1,10 +1,10 @@
 import React from "react"
 import { Link } from "gatsby"
 import Layout from "../components/App/Layout"
+import Navbar from "../components/App/Navbar"
 import SEO from "../components/App/SEO"
 import PageBanner from "../components/Common/PageBanner"
 import Footer from "../components/App/Footer"
-import Navbar from "../components/App/Navbar"
 
 import ErrorImg from "../assets/images/error.png"
 
