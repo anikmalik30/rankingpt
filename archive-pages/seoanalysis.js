@@ -2,10 +2,10 @@ import React from "react"
 import { Link } from "gatsby"
 
 
-import Layout from "../components/App/Layout"
-import SEO from "../components/App/SEO"
-import Navbar from "../components/App/Navbar"
-import Footer from "../components/App/Footer"
+import Layout from "../src/components/App/Layout"
+import SEO from "../src/components/App/SEO"
+import Navbar from "../src/components/App/Navbar"
+import Footer from "../src/components/App/Footer"
 
 import {
   Accordion,
@@ -16,12 +16,12 @@ import {
 } from "react-accessible-accordion"
 
 
-import StartProjectWithUs from "../components/English/SEOAnalysis/StartProjectWithUs"
-import HowWeAnalyseYourSEO from "../components/Common/HowWeAnalyseYourSEO"
-import SEOFeatures from "../components/English/SEOAnalysis/SEOFeatures"
-import WhatWeDo from "../components/English/SEOAnalysis/WhatWeDo"
-import AnalysisSEO from "../components/English/SEOAnalysis/AnalysisSEO"
-import AboutAnalysisSEO from "../components/English/SEOAnalysis/AboutAnalysisSEO"
+import StartProjectWithUs from "../src/components/English/SEOAnalysis/StartProjectWithUs"
+import HowWeAnalyseYourSEO from "../src/components/Common/HowWeAnalyseYourSEO"
+import SEOFeatures from "../src/components/English/SEOAnalysis/SEOFeatures"
+import WhatWeDo from "../src/components/English/SEOAnalysis/WhatWeDo"
+import AnalysisSEO from "../src/components/English/SEOAnalysis/AnalysisSEO"
+import AboutAnalysisSEO from "../src/components/English/SEOAnalysis/AboutAnalysisSEO"
 
 const seoanalysis = () => {
   return (

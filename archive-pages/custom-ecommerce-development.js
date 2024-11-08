@@ -1,26 +1,26 @@
 import React from "react"
 
-import Navbar from "../components/App/Navbar"
+import Navbar from "../src/components/App/Navbar"
 
-import Footer from "../components/App/Footer"
+import Footer from "../src/components/App/Footer"
 
-import MainBanner from "../components/English/custom-ecommerce-development/Banner"
+import MainBanner from "../src/components/English/custom-ecommerce-development/Banner"
 // import ServicesBanner from "../src/components/English/custom-ecommerce-development/ServicesBanner"
-import WhyRankingPT from "../components/English/custom-ecommerce-development/WhyRankingPT"
-import Industries from "../components/English/custom-ecommerce-development/Industries"
+import WhyRankingPT from "../src/components/English/custom-ecommerce-development/WhyRankingPT"
+import Industries from "../src/components/English/custom-ecommerce-development/Industries"
 // import Appointment from "../src/components/English/custom-ecommerce-development/Appointment"
-import Goals from "../components/English/custom-ecommerce-development/Goals"
+import Goals from "../src/components/English/custom-ecommerce-development/Goals"
 // import Funnel from "../src/components/English/custom-ecommerce-development/Funnel"
 
 
 // import IndustriesWeWork from "../components/English/custom-ecommerce-development/IndustriesWeWork"
-import StartProjectWithUs from "../components/English/custom-ecommerce-development/StartProjectWithUs"
-import PartnerCMS from "../components/Common/PartnerCMS"
-import Layout from "../components/App/Layout"
-import SEO from "../components/App/SEO"
+import StartProjectWithUs from "../src/components/English/custom-ecommerce-development/StartProjectWithUs"
+import PartnerCMS from "../src/components/Common/PartnerCMS"
+import Layout from "../src/components/App/Layout"
+import SEO from "../src/components/App/SEO"
 
 
-import WhatWeDo from "../components/Common/WhatWeDo"
+import WhatWeDo from "../src/components/Common/WhatWeDo"
 
 const HomeOne = () => {
   return (
