@@ -1,8 +1,8 @@
 import React from "react";
-import Layout from "../components/App/Layout";
-import Seo from "../components/App/SEO"; // Ensure correct import
-import Navbar from "../components/App/Navbar";
-import Footer from "../components/App/Footer";
+import Layout from "../src/components/App/Layout";
+import Seo from "../src/components/App/SEO"; // Ensure correct import
+import Navbar from "../src/components/App/Navbar";
+import Footer from "../src/components/App/Footer";
 import { Link } from "gatsby";
 
 import BlogImg1 from "../assets/images/blog/blog-img1.jpg";

@@ -1,16 +1,18 @@
 import React from "react"
-import Layout from "../components/App/Layout"
-import SEO from "../components/App/SEO"
-import Navbar from "../components/App/Navbar"
-import PageBanner from "../components/Common/PageBanner"
-import Footer from "../components/App/Footer"
-import BlogSidebar from "../components/Blog/BlogSidebar"
-import BlogComments from "../components/Blog/BlogComments"
+import Layout from "../src/components/App/Layout"
+import SEO from "../src/components/App/SEO"
+import { Swiper, SwiperSlide } from "swiper/react"
+import { Navigation, Autoplay } from "swiper"
+import Navbar from "../src/components/App/Navbar"
+import PageBanner from "../src/components/Common/PageBanner"
+import Footer from "../src/components/App/Footer"
+import BlogSidebar from "../src/components/Blog/BlogSidebar"
+import BlogComments from "../src/components/Blog/BlogComments"
 
-import BlogDetailsImg from "../assets/images/blog/blog-img1.jpg"
 import BlogImg1 from "../assets/images/blog/blog-img4.jpg"
 import BlogImg2 from "../assets/images/blog/blog-img3.jpg"
 import BlogImg3 from "../assets/images/blog/blog-img5.jpg"
+
 import User1 from "../assets/images/user1.jpg"
 
 const BlogDetails = () => {
@@ -27,9 +29,34 @@ const BlogDetails = () => {
           <div className="row">
             <div className="col-lg-8 col-md-12">
               <div className="blog-details-desc">
-                <div className="article-image">
-                  <img src={BlogDetailsImg} alt="Blog" />
-                </div>
+                <Swiper
+                  navigation={true}
+                  autoplay={{
+                    delay: 6500,
+                    disableOnInteraction: true,
+                    pauseOnMouseEnter: true,
+                  }}
+                  modules={[Navigation, Autoplay]}
+                  className="article-image-slides"
+                >
+                  <SwiperSlide>
+                    <div className="article-image">
+                      <img src={BlogImg1} alt="Blog" />
+                    </div>
+                  </SwiperSlide>
+
+                  <SwiperSlide>
+                    <div className="article-image">
+                      <img src={BlogImg2} alt="Blog" />
+                    </div>
+                  </SwiperSlide>
+
+                  <SwiperSlide>
+                    <div className="article-image">
+                      <img src={BlogImg3} alt="Blog" />
+                    </div>
+                  </SwiperSlide>
+                </Swiper>
 
                 <div className="article-content">
                   <div className="entry-meta">

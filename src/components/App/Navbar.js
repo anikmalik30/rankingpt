@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 
 import Logo from "../../assets/images/logo.png"
 import whiteLogo from "../../assets/images/white-logo.png"
-// import LanguageSwitcher from "../LanguageSwitcher"
+import LanguageSwitcher from "../LanguageSwitcher"
 
 
 const Navbar = () => {
@@ -296,7 +296,7 @@ const Navbar = () => {
                 </ul>
               </div>
               <div className="d-flex align-items-center ">
-                {/* <LanguageSwitcher /> */}
+                <LanguageSwitcher />
               </div>
 
 
