@@ -1,42 +1,45 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Select from 'react-select';
-import 'flag-icons/css/flag-icons.css';
 import { useTranslation } from 'react-i18next';
+import 'flag-icons/css/flag-icons.css';
 
-const LanguageSwitcher = () => {
+import SvgIcons from './SvgIcon';
+
+function LanguageSwitcher() {
     const { i18n } = useTranslation();
+    const [selectedLanguage, setSelectedLanguage] = useState('en');
 
     const languages = [
-        { value: 'en', label: <span className="fi fi-gb"></span> },
-        { value: 'pt', label: <span className="fi fi-pt"></span> },
-        { value: 'es', label: <span className="fi fi-es"></span> },
-        { value: 'de', label: <span className="fi fi-de"></span> },
+        { value: 'en', label: <SvgIcons name="017-united-states" size={48} color="#000" /> },
+        { value: 'pt', label: <SvgIcons name="042-portugal" size={48} color="#000" /> },
+        { value: 'es', label: <SvgIcons name="031-spain" size={48} color="#000" /> },
+        { value: 'de', label: <SvgIcons name="022-germany" size={48} color="#000" /> },
     ];
 
     const handleLanguageChange = (selectedOption) => {
         const lang = selectedOption.value;
         i18n.changeLanguage(lang);
-        if (typeof window !== "undefined") {
-            sessionStorage.setItem('siteLanguage', lang);  // Save globally for session persistence
+        setSelectedLanguage(lang);
+        if (typeof window !== 'undefined') {
+            sessionStorage.setItem('siteLanguage', lang); // Save globally for session persistence
         }
     };
 
     useEffect(() => {
-        if (typeof window !== "undefined") {
+        if (typeof window !== 'undefined') {
             const savedLanguage = sessionStorage.getItem('siteLanguage');
             if (savedLanguage && savedLanguage !== i18n.language) {
                 i18n.changeLanguage(savedLanguage);
+                setSelectedLanguage(savedLanguage);
             }
         }
     }, [i18n]);
-
-
 
     return (
         <Select
             options={languages}
             onChange={handleLanguageChange}
-            defaultValue={languages.find(lang => lang.value === sessionStorage.getItem('siteLanguage'))}
+            defaultValue={languages.find(lang => lang.value === (typeof window !== 'undefined' ? sessionStorage.getItem('siteLanguage') : 'en'))}
             isSearchable={false}
             styles={{
                 control: (provided) => ({
@@ -83,6 +86,6 @@ const LanguageSwitcher = () => {
             }}
         />
     );
-};
+}
 
 export default LanguageSwitcher;
