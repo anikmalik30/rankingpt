@@ -57,27 +57,27 @@ module.exports = {
       },
     },
     `gatsby-plugin-sitemap`, // Add the sitemap plugin here
-    // {
-    //   resolve: `gatsby-plugin-react-i18next`,
-    //   options: {
-    //     localeJsonSourceName: `locale`, // Name of directory that contains your translations
-    //     languages: [`en`, `fr`], // Define the languages you want to support
-    //     defaultLanguage: `en`,   // Set the default language
-    //     siteUrl: `https://rankingpt.com/`, // Replace with your site URL
+    {
+      resolve: `gatsby-plugin-react-i18next`,
+      options: {
+        localeJsonSourceName: `locale`, // Name of directory that contains your translations
+        languages: [`en`, `fr`], // Define the languages you want to support
+        defaultLanguage: `en`,   // Set the default language
+        siteUrl: `https://rankingpt.com/`, // Replace with your site URL
 
-    //     // Configure the translation paths
-    //     i18nextOptions: {
-    //       ns: ["translation"],
-    //       defaultNS: "translation",
-    //       fallbackLng: "en",
-    //       // interpolation: {
-    //       //   escapeValue: false, // React already does escaping
-    //       // },
-    //     },
-    //     useLocalStorage: false,
-    //     redirect: false, // Disable automatic redirects based on language
-    //   },
-    // },
+        // Configure the translation paths
+        i18nextOptions: {
+          ns: ["translation"],
+          defaultNS: "translation",
+          fallbackLng: "en",
+          // interpolation: {
+          //   escapeValue: false, // React already does escaping
+          // },
+        },
+        useLocalStorage: false,
+        redirect: false, // Disable automatic redirects based on language
+      },
+    },
     {
       resolve: 'gatsby-source-sanity',
       options: {
