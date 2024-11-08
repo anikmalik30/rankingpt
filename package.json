@@ -34,6 +34,8 @@
     "gatsby-source-sanity": "^7.9.1",
     "gatsby-transformer-sharp": "^5.13.1",
     "i18next": "^22.5.1",
+    "i18next-browser-languagedetector": "^8.0.0",
+    "i18next-http-backend": "^2.6.2",
     "postcss": "^8.4.5",
     "prop-types": "^15.8.0",
     "react": "^18.2.0",
