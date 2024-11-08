@@ -1,26 +1,19 @@
-// src/components/Icon.js
 import React from 'react';
-import { icons } from './icons';
-
-// const requireSvg = require.context('../assets/icons/svg', false, /\.svg$/);
-
-// // Create an object to hold the imported icons
-// const icons = requireSvg.keys().reduce((acc, iconPath) => {
-//     const iconName = iconPath.replace('./', '').replace('.svg', ''); // Get the icon name
-//     acc[iconName] = requireSvg(iconPath).default; // Add the icon to the accumulator
-//     return acc;
-// }, {});
+import { ReactSVG } from 'react-svg';
 
 const SvgIcon = ({ name, width, height }) => {
-    const IconSvg = icons[name];
-
-    if (!IconSvg) {
-        console.warn(`Icon "${name}" not found.`);
-        return null; // Return null if the icon is not found
-    }
+    const iconPath = `/assets/icons/svg/${name}.svg`;
 
     return (
-        <img src={IconSvg} alt={name} width={width} height={height} />
+        <ReactSVG
+            src={iconPath}
+            beforeInjection={(svg) => {
+                svg.setAttribute('width', width);
+                svg.setAttribute('height', height);
+            }}
+            fallback={() => <span>Icon not found</span>}
+            loading={() => <span>Loading...</span>}
+        />
     );
 };
 
