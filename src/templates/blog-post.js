@@ -12,7 +12,7 @@ import SvgIcon from "../components/SvgIcon";
 
 const BlogPost = ({ data }) => {
     const { i18n } = useTranslation(); // Use i18n to access current language
-    const post = data.sanityPost; // all the data from the post
+    const post = data?.sanityPost; // all the data from the post
 
     const { title, metaTitle, _rawBody, categories, publishedAt, author, mainImage } = post;
 
